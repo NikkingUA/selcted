@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <input type="text" maxlength="5" id="input"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="input">
+        <select name="random" id="select-range">
+            <option value="year">Year</option>
+            <option value="date">Date</option>
+            <option value="trivia">Trivia</option>
+            <option value="math">Math</option>
+        </select>
+        <button type="button" id="show">Show</button>
+        <button type="button" id="random">Random</button>
+        <p class="error"></p>
+
+        <div id="place-for-render">
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
